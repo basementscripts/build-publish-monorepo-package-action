@@ -6,9 +6,14 @@ inputs:
     required: true
   package-paths:
     description: "Paths to the packages to build and publish"
-# outputs:
-#   package-version:
-#     description: "The version of the package that was published"
+  github-token:
+    description: "GitHub token to use for publishing"
+    required: true
+outputs:
+  version:
+    description: "The version of the package that was published"
+  published:
+    description: "Whether the package was published"
 runs:
   using: node16
   main: dist/index.js
