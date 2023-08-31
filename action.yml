@@ -1,0 +1,14 @@
+name: Build and Publish Monorepo Package
+description: Build and publish a package from a monorepo
+inputs:
+  package-path:
+    description: "Path to the package to build and publish"
+    required: true
+  package-paths:
+    description: "Paths to the packages to build and publish"
+# outputs:
+#   package-version:
+#     description: "The version of the package that was published"
+runs:
+  using: node16
+  main: dist/index.js
